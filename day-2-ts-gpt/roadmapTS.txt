@@ -1,0 +1,411 @@
+***********Advanced topics********************
+01_Pick.ts
+02_Partial.ts
+Week-14 Update
+6 months ago
+03_ReadOnly.ts
+Week-14 Update
+6 months ago
+04_Records.ts
+Week-14 Update
+6 months ago
+05_Map.ts
+Week-14 Update
+6 months ago
+06_Exclude.ts
+Week-14 Update
+6 months ago
+07_TypeInference_in_Zod.ts
+
+
+
+
+************ROADmap*****************
+
+Level 1: Foundations & Setup
+Goal: Get the TS compiler running, grasp the core type system, and write your first typed scripts.
+
+Environment & Tooling
+
+Concepts:
+
+Installing TypeScript (npm install -D typescript)
+
+tsconfig.json basics: target, module, strict flags
+
+Practice:
+
+Scaffold a bare‑bones project, compile hello.ts → hello.js
+
+Tweak strict options and observe compiler errors
+
+Primitive Types & Variables
+
+Concepts: string, number, boolean, any, unknown, void, null/undefined
+
+Practice:
+
+Write functions with explicit return types
+
+Swap any ⇒ unknown, force type‑guards
+
+
+
+Interfaces & Type Aliases
+
+Concepts: structural typing, interfaces vs. aliases, optional/readonly properties
+
+Practice:
+
+Model a User object, consume it in functions
+
+Extend interfaces, intersect type aliases
+
+Summary & Key Wins
+
+TS installed and configured
+
+Solid grip on primitives, strict checking
+
+Defined and extended simple object types
+
+
+
+
+Level 2: Functions, Generics & Inference
+Goal: Master function signatures, unleash generics, and lean into TS’s inference engine.
+
+Function Types & Overloads
+
+Concepts: typed parameters, return types, optional/rest parameters, function overloads
+
+Practice:
+
+Build a calculate overload for add(a,b) vs. add(a,b,c)
+
+Enforce strict null checks in callbacks
+
+
+
+
+
+Generics 101
+
+Concepts: generic functions, interfaces, constraints (T extends …)
+
+Practice:
+
+Create a wrap<T>(value: T) utility
+
+Build a generic Repository<T> interface for CRUD ops
+
+
+
+
+Type Inference & Contextual Typing
+
+Concepts: how TS infers types from usage vs. annotations
+
+Practice:
+
+Remove explicit types and let TS infer
+
+Use as const and see literal inference
+
+
+
+
+Summary & Key Wins
+
+Typed your entire function layer
+
+Built reusable, generic utilities
+
+Trusted TS inference to reduce boilerplate
+
+
+
+
+Level 3: Advanced Type System
+Goal: Deep‑dive into union, intersection, mapped and conditional types for rock‑solid type­safety.
+
+Union & Intersection Types
+
+Concepts: discriminated unions, tag‑based narrowing
+
+Practice:
+
+Model a Shape = Circle|Square and compute area with exhaustive checks
+
+
+
+
+
+Mapped & Conditional Types
+
+Concepts: Partial<T>, Readonly<T>, custom mapped types, conditional (T extends U ? X : Y)
+
+Practice:
+
+Implement a DeepReadonly<T>
+
+Build a PickByValue<T, V> that picks props matching a value type
+
+
+
+
+
+
+Utility Types & Index Signatures
+
+Concepts: built‑in utilities (Record, Exclude, Extract), dynamic keys
+
+Practice:
+
+Create a Config = Record<string, string> and transform it
+
+
+
+
+Summary & Key Wins
+
+Crafted powerful, DRY type transformations
+
+Ensured exhaustive checks and zero‑runtime surprises
+
+No more “any” ghosts lurking in your code
+
+
+
+
+
+
+
+
+
+
+Level 4: TS in the Wild (Frameworks & Ecosystems)
+Goal: Embed TS into real‑world stacks—React, Node.js, tooling pipelines—and ship production‑grade apps.
+
+TypeScript + React
+
+Concepts: TSX, React.FC<Props>, useState<T>, context typing
+
+Practice:
+
+Convert a small React component library to TSX
+
+Enforce strict typing on props and hooks
+
+TypeScript + Node.js / Express
+
+Concepts: typing req, res, middleware, .d.ts declaration files
+
+Practice:
+
+Spin up a typed Express CRUD API
+
+Write a custom type declaration for a third‑party lib
+
+Toolchain Integration
+
+Concepts: ESLint with @typescript-eslint, Prettier, Babel vs. TS‑only builds
+
+Practice:
+
+Add lint/prettier CI checks
+
+Configure incremental (--incremental) and watch mode
+
+Summary & Key Wins
+
+Seamlessly integrated TS into front‑ and back‑ends
+
+Automated your code quality pipeline
+
+Reduced runtime bugs by catching them at compile time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🟢 LEVEL 0: Kickoff - JavaScript to TypeScript Mindset Shift
+"If JS is flexible, TS is a gym trainer: strict, but makes you strong."
+
+🔑 Concepts to Learn:
+Why TypeScript – benefits over JavaScript
+
+Installation + tsconfig.json
+
+Basic Types – string, number, boolean, any, unknown, void, null, undefined
+
+Type Annotations vs Type Inference
+
+Basic Functions with TS
+
+💡 Practice Tasks:
+Convert simple JS file to .ts (e.g. calculator, string reverse)
+
+Annotate function parameters + return types
+
+Play with any vs unknown – observe behavior
+
+🟡 LEVEL 1: Strong Typing & Real Usage
+🔑 Concepts:
+Arrays & Tuples
+
+Objects and Type Aliases
+
+Enums
+
+Union & Intersection Types
+
+Literal Types
+
+Optional Properties
+
+Function Overloading
+
+💡 Practice Tasks:
+Build a Todo App in TypeScript (no React yet)
+
+Create a User type and use it in multiple functions
+
+Create a function that supports multiple argument types using union & overloading
+
+Make your own mini APIResponse<T> type
+
+🟠 LEVEL 2: Intermediate TypeScript - Bringing Order to Chaos
+🔑 Concepts:
+Type Narrowing
+
+Type Guards
+
+Interfaces vs Type Aliases
+
+Generics – functions, arrays, objects
+
+Extending Types & Interfaces
+
+Readonly and Partial
+
+Type Assertion + as Keyword
+
+💡 Practice Tasks:
+Build a Form Validator Utility with generics
+
+Create a custom fetch wrapper that returns typed responses
+
+Create a generic Stack<T> or Queue<T> data structure
+
+Use type guards to create a safe isString() or isUser() checker
+
+🟠 LEVEL 3: OOP & Advanced Patterns
+🔑 Concepts:
+Classes & Access Modifiers – public, private, protected
+
+Abstract Classes
+
+Implements Interface
+
+Static properties/methods
+
+Advanced Generics – constraints, default types
+
+Utility Types – Pick, Omit, Record, Exclude, Extract, ReturnType
+
+💡 Practice Tasks:
+Build a simple banking system using classes and interfaces
+
+Make a type-safe form generator using mapped types + utility types
+
+Create a Repository<T> class for CRUD operations
+
+🔵 LEVEL 4: TypeScript with React + APIs
+🔑 Concepts:
+Typing useState, useEffect, useRef, etc.
+
+Typing Props, Children, Events
+
+Handling axios or fetch response types
+
+Form handling + event types
+
+Using Context API with types
+
+💡 Practice Tasks:
+Convert your React app to TypeScript (one component at a time)
+
+Create a User Management Dashboard
+
+Make a reusable Button or Input component with strict prop types
+
+Build a useFetch<T>() hook with generics
+
+🔴 LEVEL 5: Production Ready & TS in the Real World
+🔑 Concepts:
+Monorepos with TS (e.g. Turborepo)
+
+TSConfig for different environments
+
+Declaration Files (.d.ts)
+
+Using 3rd Party JS libraries with TS
+
+Error handling types
+
+TS with Node.js, Express, WebSocket, Redis
+
+Working with TypeORM/Prisma Types
+
+💡 Practice Tasks:
+Setup a fullstack MERN + TypeScript project
+
+Write your own .d.ts for a JS lib
+
+Build a real-time chat app using TS + WebSocket
+
+Type your Express RequestHandler with Request<Params, ResBody, ReqBody>
+
+🎯 BONUS: Interview Prep & Real-Life Edge Cases
+Type puzzles (e.g. infer types from other types)
+
+Discriminated Unions for API response types
+
+Advanced utility types from community libraries (zod, io-ts, etc.)
+
+Typescript Performance Tips
+
+Integrate with GraphQL types
+
